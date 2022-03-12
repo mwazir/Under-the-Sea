@@ -1,0 +1,82 @@
+/* Typography */
+
+html {
+    font-size: 125%; // Setting base-font to 20px (16px * 125%)
+}
+
+body {
+    font-family: $bodyFont, sans-serif;
+    color: $primary;
+    @include fontSize(20);
+    @include lineHeight(32);
+}
+
+h1, h2, h3, h4, h5, h6, nav li, button {
+    font-family: $headingFont, sans-serif;
+    font-weight: bold;
+    color: $primary;
+}
+
+h1 {
+    @include fontSize(138);
+    @include lineHeight(126);
+    text-transform: uppercase;
+    margin-bottom: 20px;    
+}
+
+h2 {
+    @include fontSize(80);
+    @include lineHeight(92);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h3 {
+    @include fontSize(42);
+    @include letterSpacing(1);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h4 {
+    @include fontSize(32);
+    @include letterSpacing(1);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h5 {
+    @include fontSize(28);
+    @include letterSpacing(1);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+nav li, a {
+    @include fontSize(20);
+    @include lineHeight(29);
+    @include letterSpacing(1);
+    font-family: $headingFont, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: center;
+    padding: 10;
+    margin: 10;
+    
+}
+
+button {
+    @include fontSize(20);
+    @include lineHeight(32);
+    @include letterSpacing(1);
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+

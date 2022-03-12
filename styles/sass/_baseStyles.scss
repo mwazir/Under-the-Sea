@@ -1,0 +1,91 @@
+/* Base Styles */
+
+body {
+    background: $secondary;
+}
+
+.wrapper {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul, li, a, input {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.find-out-more {
+    background: $quaternary;
+    color: $secondary;
+    display: inline-block;
+    line-height: 50px;
+    width: 225px;  
+    height: 50px;  
+}
+
+.read-more {
+    background: $secondary;
+    color: $primary;
+    display: inline-block;
+    line-height: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+form {
+    input {
+        font-family: $bodyFont;
+        @include fontSize(20);
+        border: none;
+        border-bottom: 2px solid $quaternary;
+        padding-top: 5px;
+        padding-left: 25px;
+        padding-bottom: 20px;
+        background: transparent;
+        color: $primary;
+
+        &::placeholder {
+            color: $primary;
+            opacity: 1; 
+        }
+    }
+    
+    textarea {
+        font-family: $bodyFont;
+        @include fontSize(20);
+        border: 2px solid $quaternary;
+        padding-left: 20px;
+        padding-top: 20px;
+        background: transparent;
+        color: $primary;
+
+        &::placeholder {
+            color: $primary;
+            opacity: 1; 
+        }
+    }
+
+    button {
+        background: $tertiary;
+        border: none;
+        padding: 10px;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+

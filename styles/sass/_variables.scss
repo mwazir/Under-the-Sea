@@ -1,0 +1,24 @@
+/* Variables Partial */
+
+/* Colours:
+- primary text (white): #FFFFFF
+- secondary (dark blue grey): #0C1423
+- tertiary (spruce): #0F614E
+- quaternary (blue): #86E0F9 
+*/
+
+// Site Colour Variables
+$primary: #FFFFFF;
+$secondary: #0C1423;
+$tertiary: #0F614E;
+$quaternary: #86E0F9;
+
+/* Fonts:
+- headings, nav, and buttons: Barlow, Bold
+- body: lato, Regular
+*/
+
+// Site Font Variables
+$headingFont: 'Barlow';
+$bodyFont: 'Lato';
+$baseFontSize: 1rem; // Root element font-size set to 125%, 1rem = 20px

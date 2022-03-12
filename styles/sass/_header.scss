@@ -1,0 +1,47 @@
+/* Header Styles */
+.index-header {
+    background: rgba(0, 0, 0, 0.4) url(../assets/header-image.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    position: relative;
+
+    h1 {
+        display: inline-block;
+        word-spacing: 100vw;
+    }
+
+    .img-container {
+        width: 50%;
+        position: absolute;
+        top: 175px;
+        right: 0px;
+    }
+    
+}
+
+.header-nav {
+    padding-top: 40px;
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 20px;
+        
+        li {
+            margin-left: 60px;
+
+            &:hover {
+                color: $quaternary;
+            }
+        }
+    }
+}
+
+
+
+
+
+

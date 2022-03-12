@@ -225,3 +225,245 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* Mixins */
+/* Variables Partial */
+/* Colours:
+- primary text (white): #FFFFFF
+- secondary (dark blue grey): #0C1423
+- tertiary (spruce): #0F614E
+- quaternary (blue): #86E0F9 
+*/
+/* Fonts:
+- headings, nav, and buttons: Barlow, Bold
+- body: lato, Regular
+*/
+/* Typography */
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6, nav li, button {
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 6.9rem;
+  line-height: 6.3rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 4.6rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2.1rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+nav li, a {
+  font-size: 1rem;
+  line-height: 1.45rem;
+  letter-spacing: 0.05rem;
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+  padding: 10;
+  margin: 10;
+}
+
+button {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+/* Base Styles */
+body {
+  background: #0C1423;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul, li, a, input {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.find-out-more {
+  background: #86E0F9;
+  color: #0C1423;
+  display: inline-block;
+  line-height: 50px;
+  width: 225px;
+  height: 50px;
+}
+
+.read-more {
+  background: #0C1423;
+  color: #FFFFFF;
+  display: inline-block;
+  line-height: 50px;
+  width: 150px;
+  height: 50px;
+}
+
+form input {
+  font-family: "Lato";
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #86E0F9;
+  padding-top: 5px;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  background: transparent;
+  color: #FFFFFF;
+}
+form input::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form input::-moz-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form input:-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form input::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form input::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form textarea {
+  font-family: "Lato";
+  font-size: 1rem;
+  border: 2px solid #86E0F9;
+  padding-left: 20px;
+  padding-top: 20px;
+  background: transparent;
+  color: #FFFFFF;
+}
+form textarea::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form textarea::-moz-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form textarea:-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form textarea::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form textarea::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+form button {
+  background: #0F614E;
+  border: none;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Header Styles */
+.index-header {
+  background: rgba(0, 0, 0, 0.4) url(../assets/header-image.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+}
+.index-header h1 {
+  display: inline-block;
+  word-spacing: 100vw;
+}
+.index-header .img-container {
+  width: 50%;
+  position: absolute;
+  top: 175px;
+  right: 0px;
+}
+
+.header-nav {
+  padding-top: 40px;
+}
+.header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 20px;
+}
+.header-nav ul li {
+  margin-left: 60px;
+}
+.header-nav ul li:hover {
+  color: #86E0F9;
+}
