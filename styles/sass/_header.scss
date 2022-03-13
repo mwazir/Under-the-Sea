@@ -5,7 +5,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 70vh;
+    height: 80vh;
     position: relative;
 
     h1 {
@@ -39,6 +39,33 @@
         }
     }
 }
+
+.blog-header {
+
+    background: rgba(0, 0, 0, 0.4) url(../assets/blog-header.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    
+    h2 {
+        text-align: center;
+        margin: 0px;
+        padding: 200px 0px 200px 0px;
+    }
+    
+    
+    .img-container {
+        width: 50%;
+        position: absolute;
+        top: 175px;
+        right: 0px;
+    }
+    
+}
+
+
 
 
 

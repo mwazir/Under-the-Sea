@@ -435,7 +435,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 80vh;
   position: relative;
 }
 .index-header h1 {
@@ -466,4 +466,185 @@ img {
 }
 .header-nav ul li:hover {
   color: #86E0F9;
+}
+
+.blog-header {
+  background: rgba(0, 0, 0, 0.4) url(../assets/blog-header.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+.blog-header h2 {
+  text-align: center;
+  margin: 0px;
+  padding: 200px 0px 200px 0px;
+}
+.blog-header .img-container {
+  width: 50%;
+  position: absolute;
+  top: 175px;
+  right: 0px;
+}
+
+/* Section Styles */
+.what-is-under-the-sea {
+  padding: 200px 200px 220px 200px;
+}
+.what-is-under-the-sea .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.what-is-under-the-sea .wrapper h3 {
+  text-align: center;
+}
+.what-is-under-the-sea .wrapper p {
+  margin-bottom: 40px;
+}
+
+.new-additions-and-meet-real-nemo {
+  background: #0F614E;
+  position: relative;
+  padding-bottom: 50px;
+}
+.new-additions-and-meet-real-nemo .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.new-additions-and-meet-real-nemo .wrapper .txt-container-right {
+  margin-left: 120px;
+  margin-bottom: 110px;
+  padding-top: 20px;
+  width: calc(50% - 120px);
+}
+.new-additions-and-meet-real-nemo .wrapper .txt-container-left {
+  margin-right: 120px;
+  margin-top: 110px;
+  width: calc(50% - 120px);
+  text-align: right;
+}
+.new-additions-and-meet-real-nemo .wrapper .img-container-left {
+  margin-right: 100px;
+  width: calc(50% - 100px);
+}
+.new-additions-and-meet-real-nemo .wrapper .img-container-left img {
+  width: 43vw;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  -webkit-box-shadow: 45px 50px 0 #86E0F9;
+          box-shadow: 45px 50px 0 #86E0F9;
+}
+.new-additions-and-meet-real-nemo .wrapper .img-container-right {
+  margin-left: 100px;
+  width: calc(50% - 100px);
+}
+.new-additions-and-meet-real-nemo .wrapper .img-container-right img {
+  width: 43vw;
+  position: absolute;
+  bottom: -50px;
+  right: 0px;
+  -webkit-box-shadow: -45px 50px 0 #86E0F9;
+          box-shadow: -45px 50px 0 #86E0F9;
+}
+
+.locations-community-blog-contact {
+  padding: 150px 0px 75px 0px;
+}
+.locations-community-blog-contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.locations-community-blog-contact .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+.locations-community-blog-contact .icon-container {
+  width: calc(5% - 37.5px);
+  margin-right: 75px;
+}
+.locations-community-blog-contact .icon-container i {
+  font-size: 1.25rem;
+  background: #86E0F9;
+  color: #0C1423;
+  border-radius: 50%;
+  padding: 12px;
+}
+.locations-community-blog-contact .txt-container {
+  width: calc(95% - 37.5px);
+  margin-top: 10px;
+}
+.locations-community-blog-contact .txt-container h4 {
+  margin: 0px;
+}
+
+.this-month-profile {
+  padding: 125px 0px 100px 0px;
+}
+.this-month-profile .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.this-month-profile .img-container {
+  width: 25%;
+  margin-right: 100px;
+}
+.this-month-profile .img-container img {
+  -webkit-box-shadow: 45px 45px 0 #86E0F9;
+          box-shadow: 45px 45px 0 #86E0F9;
+}
+.this-month-profile .txt-container {
+  width: 75%;
+  margin-left: 50px;
+}
+.this-month-profile .txt-container h3 {
+  text-align: left;
+  margin: 0px;
+}
+.this-month-profile .txt-container p {
+  margin-bottom: 50px;
+}
+
+.gallery {
+  background: #0F614E;
+  padding: 100px 0px 100px 0px;
+}
+.gallery .wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gallery .wrapper ul li {
+  width: 32%;
+}
+
+footer {
+  background: #86E0F9;
+  color: #0C1423;
+}
+footer p {
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
 }

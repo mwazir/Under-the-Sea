@@ -1,0 +1,174 @@
+/* Section Styles */
+
+// Index Page Sections
+
+// What is under the Sea Section Styles
+
+.what-is-under-the-sea {
+    padding: 200px 200px 220px 200px;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.new-additions-and-meet-real-nemo {
+    background: $tertiary;
+    position: relative;
+    padding-bottom: 50px;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .txt-container-right {
+            margin-left: 120px;
+            margin-bottom: 110px;
+            padding-top: 20px;
+            width: calc(50% - 120px);
+        }
+
+        .txt-container-left {
+            margin-right: 120px;
+            margin-top: 110px;
+            width: calc(50% - 120px);
+            text-align: right;
+        }
+
+        .img-container-left {
+            margin-right: 100px;
+            width: calc(50% - 100px);
+            
+
+            img {
+                width: 43vw;
+                position: absolute;
+                top: -50px;
+                left: 0px;
+                box-shadow: 45px 50px 0 $quaternary;           
+            }
+        }
+
+        .img-container-right{
+            margin-left: 100px;
+            width: calc(50% - 100px);
+
+            img {
+                width: 43vw;
+                position: absolute;
+                bottom: -50px;
+                right: 0px;
+                box-shadow: -45px 50px 0 $quaternary
+            }
+        }
+
+    }
+}
+
+.locations-community-blog-contact {
+    padding: 150px 0px 75px 0px;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .info-container {
+        display: flex;
+        width: 50%;
+    }
+
+    .icon-container {
+        width: calc(5% - (75px / 2));
+        margin-right: 75px;
+
+        i {
+            @include fontSize(25);
+            background: $quaternary;
+            color: $secondary;
+            border-radius: 50%;
+            padding: 12px;
+        }
+    }
+
+    .txt-container {
+        width: calc(95% - (75px / 2));
+        margin-top: 10px;
+
+        h4 {
+            margin: 0px;
+        }
+    }
+}
+
+.this-month-profile {
+    padding: 125px 0px 100px 0px;
+
+    .wrapper {
+        display: flex;
+    }
+
+    .img-container {
+        width: 25%;
+        margin-right: 100px;
+        
+        img {
+            box-shadow: 45px 45px 0 $quaternary;
+        }
+    }
+
+    .txt-container {
+        width: 75%;
+        margin-left: 50px;
+
+        h3 {
+            text-align: left;
+            margin: 0px;
+        }
+
+        p {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.gallery {
+    background: $tertiary;
+    padding: 100px 0px 100px 0px;
+
+    .wrapper {
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: 32%;
+
+            }
+        }
+    }
+}
+
+footer {
+    background: $quaternary;
+    color: $secondary;
+
+    p {
+        margin: 0px;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+// Index Page Sections
