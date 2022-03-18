@@ -1,13 +1,22 @@
 /* Base Styles */
 
 body {
-    background: $secondary;
+    background: $secondary; // Dark Blue Grey
 }
 
-.wrapper {
-    max-width: 1400px;
-    width: 90%;
+.outer-wrapper {
+    position: relative;
     margin: 0 auto;
+    width: 90%;
+    max-width: 1400px;
+    
+}
+
+.inner-wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    
 }
 
 ul, li, a, input {
@@ -21,41 +30,38 @@ ul {
 
 a {
     text-decoration: none;
-    color: inherit;
     cursor: pointer;
+    color: inherit;
     transition: 0.3s;
 }
 
 .find-out-more {
-    background: $quaternary;
-    color: $secondary;
     display: inline-block;
-    line-height: 50px;
     width: 225px;  
-    height: 50px;  
+    height: 50px; 
+    background: $quaternary;
+    line-height: 50px;
+    color: $secondary;     
 }
 
 .read-more {
-    background: $secondary;
-    color: $primary;
     display: inline-block;
-    line-height: 50px;
     width: 150px;
     height: 50px;
+    background: $secondary;
+    line-height: 50px;
+    color: $primary;
 }
 
 form {
     input {
-        font-family: $bodyFont;
         @include fontSize(20);
         border: none;
         border-bottom: 2px solid $quaternary;
-        padding-top: 5px;
-        padding-left: 25px;
-        padding-bottom: 20px;
+        padding: 5px 0px 25px 20px;
         background: transparent;
+        font-family: $bodyFont;
         color: $primary;
-
         &::placeholder {
             color: $primary;
             opacity: 1; 
@@ -63,8 +69,8 @@ form {
     }
     
     textarea {
-        font-family: $bodyFont;
         @include fontSize(20);
+        font-family: $bodyFont;
         border: 2px solid $quaternary;
         padding-left: 20px;
         padding-top: 20px;

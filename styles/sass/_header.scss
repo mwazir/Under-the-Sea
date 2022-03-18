@@ -1,34 +1,50 @@
 /* Header Styles */
-.index-header {
-    background: rgba(0, 0, 0, 0.4) url(../assets/header-image.jpg);
+
+// General Header Styles
+.header {
+    background: rgba(0, 0, 0, 0.5) url(../assets/header-image.jpg);
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 70vh;
     position: relative;
 
-    h1 {
-        display: inline-block;
-        word-spacing: 100vw;
-    }
-
-    .img-container {
-        width: 50%;
-        position: absolute;
-        top: 175px;
-        right: 0px;
-    }
-    
-}
-
-.header-nav {
-    padding-top: 40px;
-
-    ul {
+    .inner-wrapper {
         display: flex;
-        justify-content: flex-end;
-        margin-left: 20px;
+        flex-wrap: wrap;
+
+        .title-container {
+            width: 50%;
+            margin: 125px 0px 0px 0px;
+        }
+
+        h1 {
+            margin: 0;
+            width: 75%;
+        }
+
+        .img-container {
+            width: 50%;
+            margin: 125px 0px 0px 0px;
+        }
+
+        img {
+            position: absolute;
+            width: 55%;
+            right: 0;
+        }
+    }
+
+    .primary-nav {
+        width: 100%;
+        padding-top: 40px;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 20px;
+        }
         
         li {
             margin-left: 60px;
@@ -40,16 +56,30 @@
     }
 }
 
-.blog-header {
 
-    background: rgba(0, 0, 0, 0.4) url(../assets/blog-header.jpg);
-    background-blend-mode: darken;
+// Blog Page Specific Header Styles
+.blog-header {
+    background: url(../assets/blog-header.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 70vh;
+
+    .inner-wrapper {
+        .title-container {
+            justify-content: center;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+    }
+
+    
+    
     
     h2 {
+        width: 100%;
         text-align: center;
         margin: 0px;
         padding: 200px 0px 200px 0px;
@@ -64,6 +94,35 @@
     }
     
 }
+
+// Contact Page Header
+
+.contact-header {
+    background: url(../assets/contact-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+
+    .inner-wrapper {
+
+        .title-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    }
+    
+    h2 {
+        text-align: center;
+        margin: 0px;
+        padding: 200px 0px 200px 0px;
+    }    
+}
+
+
 
 
 

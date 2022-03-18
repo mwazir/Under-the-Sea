@@ -16,9 +16,9 @@
     </head>
     <body>
         <!--Header-->
-        <header class="contact-header">
-            <div class="wrapper">
-                <nav class="header-nav">
+        <header class="header contact-header">
+            <div class="inner-wrapper">
+                <nav class="priamry-nav">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -26,15 +26,18 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
-                <h2>Get in Touch</h2>
+                <div class="title-container">
+                    <h2>Get in Touch</h2>
+                </div>
+                
             </div>
-            <!--.wrapper END-->
+            <!--.inner-inner-wrapper END-->
         </header>
         <!--End of Header-->
         <main>
             <!--Contact Section-->
             <section class="contact">
-                <div class="wrapper">
+                <div class="inner-wrapper">
                     <div class="contact-info-container">
                         <ul>
                             <li><i class="fa-brands fa-facebook-f"></i></li>
@@ -48,13 +51,14 @@
                         <p>Toronto, Ontario</p>
                         <p>M5V2D5</p>
                     </div> <!--.contact-info-container END-->
-                    <form action="#">
-                        <input type="text" id="name" placeholder="Name">
-                        <label for="name"></label>
-                        
-                        <input type="text" id="email" placeholder="Email Address">
-                        <label for="email"></label>
-                        
+                    <form class="contact-form-container" action="#">
+                        <div class="name-email-container">
+                            <input type="text" id="name" placeholder="Name">
+                            <label for="name"></label>
+                            
+                            <input type="text" id="email" placeholder="Email Address">
+                            <label for="email"></label>
+                        </div>                       
                         <textarea id="message" rows="10" cols="50" placeholder="Message"></textarea>
                         <label for="message"></label>
                         
@@ -66,7 +70,7 @@
         </main>
         <!--Footer-->
         <footer>
-            <div class="wrapper">
+            <div class="inner-wrapper">
                 <p>Copyright &copy; 2018 HackerYou</p>
             </div>
         </footer>

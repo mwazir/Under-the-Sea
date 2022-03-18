@@ -2,60 +2,57 @@
 
 // Index Page Sections
 
-// What is under the Sea Section Styles
-
-.what-is-under-the-sea {
+// About Section (Section #1 - What is under the sea) Styles
+.about-section {
     padding: 200px 200px 220px 200px;
 
-    .wrapper {
+    .inner-wrapper {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
 
         h3 {
-            text-align: center;
+            width: 100%;
         }
 
         p {
+            width: 100%;
             margin-bottom: 40px;
         }
     }
 }
 
-.new-additions-and-meet-real-nemo {
+// Read More Section (Section #2 - New Additions and Meet Real Nemo) Styles
+.read-more-section {
     background: $tertiary;
-    position: relative;
     padding-bottom: 50px;
 
-    .wrapper {
+    .inner-wrapper {
         display: flex;
         flex-wrap: wrap;
 
         .txt-container-right {
-            margin-left: 120px;
-            margin-bottom: 110px;
-            padding-top: 20px;
+            margin: 10px 0px 0px 120px;
             width: calc(50% - 120px);
         }
 
         .txt-container-left {
-            margin-right: 120px;
-            margin-top: 110px;
+            margin: 0px 120px 10px 0px;
             width: calc(50% - 120px);
             text-align: right;
         }
 
         .img-container-left {
             margin-right: 100px;
+            margin-bottom: 400px;
             width: calc(50% - 100px);
             
-
             img {
-                width: 43vw;
+                width: 40%;
                 position: absolute;
                 top: -50px;
                 left: 0px;
-                box-shadow: 45px 50px 0 $quaternary;           
+                box-shadow: 45px 45px 0 $quaternary;           
             }
         }
 
@@ -64,21 +61,21 @@
             width: calc(50% - 100px);
 
             img {
-                width: 43vw;
+                width: 40%;
                 position: absolute;
                 bottom: -50px;
                 right: 0px;
-                box-shadow: -45px 50px 0 $quaternary
+                box-shadow: -45px 45px 0 $quaternary
             }
         }
 
     }
 }
 
-.locations-community-blog-contact {
-    padding: 150px 0px 75px 0px;
+.additional-info-section {
+    padding: 125px 0px 50px 0px;
 
-    .wrapper {
+    .inner-wrapper {
         display: flex;
         flex-wrap: wrap;
     }
@@ -86,6 +83,7 @@
     .info-container {
         display: flex;
         width: 50%;
+        margin-bottom: 25px;
     }
 
     .icon-container {
@@ -114,7 +112,7 @@
 .this-month-profile {
     padding: 125px 0px 100px 0px;
 
-    .wrapper {
+    .inner-wrapper {
         display: flex;
     }
 
@@ -146,7 +144,7 @@
     background: $tertiary;
     padding: 100px 0px 100px 0px;
 
-    .wrapper {
+    .inner-wrapper {
 
         ul {
             display: flex;
@@ -174,15 +172,16 @@ footer {
 // Blog Page Sections
 
 .blog-sections {
+
+    padding-bottom: 100px;
     
 
-    .wrapper {
+    .inner-wrapper {
         display: flex;
         
     }
 
     aside {
-        border: 2px solid red;
         width: 35%;
         margin-right: 60px;
         padding-top: 120px;
@@ -193,19 +192,17 @@ footer {
             background: $tertiary;
             padding-top: 400px;
             padding-bottom: 30px;
-            position: relative;
+            
             
             
         }
 
-        .img-container {
-            
-        }
 
         img {
+            width: 33%;
             position: absolute;
-            top: -20px;
-            left: -180px;
+            top: 100px;
+            left: -20px;
         }
 
         .txt-container {
@@ -213,7 +210,7 @@ footer {
         }
 
         h5 {
-            margin: 25px 0px 0px 0px;
+            margin: 0px;
         }
 
         p {
@@ -229,12 +226,27 @@ footer {
     }
 
     article {
-        width: 65%;
+        width: 75%;
 
         .blog-content {
             border-left: 5px solid $quaternary;
             border-bottom: 5px solid $quaternary;
+            padding-top: 400px;
+
+            .img-container {
+            // margin-left: 100px;
+            // width: calc(50% - 100px);
+
+                img {
+                    width: 65%;
+                    position: absolute;
+                    top: -260px;
+                    right: -77px;
+                    box-shadow: -45px 45px 0 $quaternary
+                }
+            }
         }
+
 
         .txt-container {
             margin-left: 50px;
@@ -249,6 +261,8 @@ footer {
                 margin-bottom: 50px;
             }
         }
+
+        
 
         .posted-comments {
             display: flex;
@@ -286,7 +300,110 @@ footer {
 
         
         }
+
+        form {        
+            .name-email-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+
+                input {
+                width: calc(50% - 30px);
+                margin-left: 30px;
+                margin-bottom: 40px;
+            }
+            }
+            
+
+            
+
+            textarea {
+                margin-left: 30px;
+                margin-bottom: 50px;
+                width: calc(100% - 30px);
+                
+            }
+
+            button {
+                margin-left: 30px;
+                width: calc(100% - 30px);
+            }
+        }
     }
 
     
 }
+
+// Contact Page Sections
+
+.contact {
+    padding: 150px 0px 150px 0px;
+
+    .inner-wrapper {
+        display: flex;
+        position: relative;
+    }
+
+    .contact-info-container {
+        
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin-right: 30px;
+            @include fontSize(30)
+        }
+
+        h5 {
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 0
+        }
+    }
+
+    .contact-form-container {
+        //border: 2px solid red;
+        width: 70%;
+        background: $tertiary;
+        padding: 100px 50px 100px 50px;
+        position: absolute;
+        top: -425px;
+        right: 0;
+        box-shadow: -45px 45px 0 $quaternary;;
+
+               
+            .name-email-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            input {
+                
+                width: calc(48%);
+                margin-bottom: 50px;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            button {
+                margin-top: 50px;
+                width: 100%;
+                text-align: center;
+                background: $secondary;
+                
+            }
+    }
+}
+
+
