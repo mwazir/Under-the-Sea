@@ -33,6 +33,7 @@ h2 {
 
 h3 {
     @include fontSize(42);
+    @include lineHeight(52);
     @include letterSpacing(1);
     text-transform: uppercase;
     margin-bottom: 20px;
