@@ -16,29 +16,51 @@
     </head>
     <body>
         <!--Header-->
-        <header class="header blog-header">
+        <header class="blog-header">
             <div class="outer-wrapper">
                 <div class="inner-wrapper">
+                    <!--Start of Mobile Navigation Menu (Overlay Menu)-->
+                    <div class="mobile-menu-wrap">
+                        <input type="checkbox" class="toggler">
+                        <div class="hamburger">
+                            <div class="hamburger-icon-container">
+                            </div>
+                        </div> <!--.hamburger END-->
+                        <div class="overlay-menu">
+                            <div class="overlay-menu-sub-container-one">
+                                <div class="overlay-menu-sub-container-two">
+                                    <ul>
+                                        <li><a href="./index.html">Home</a></li>
+                                        <li><a href="./index.html#about">About</a></li>
+                                        <li><a href="./blog.html">Blog</a></li>
+                                        <li><a href="./contact.html">Contact</a></li>
+                                    </ul>
+                                </div> <!--.overlay-menu-sub-container-two END-->
+                            </div> <!--.overlay-menu-sub-container-one END-->
+                        </div> <!--.overlay-menu END-->
+                    </div> <!--.mobile-menu-wrap END-->
+                    <!--End of Mobile Navigation Menu (Overlay Menu)-->
+                    <!--Start of Primary Navigation Menu (Non-Mobile)-->
                     <nav class="primary-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./index.html#about">About</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
                         </ul>
-                    </nav>
+                    </nav> <!--.primary-nav END-->
                     <div class="title-container">
                         <h2>Blog</h2>
-                    </div>
-                </div>
-                <!--.wrapper END-->
-            </div>            
+                    </div> <!--.title-container END-->
+                </div> <!--.inner-wrapper END-->
+            </div> <!--.outer-wrapper END-->
         </header>
-        <!--End of Header-->
+        <!--End of Header Section-->
+        <!--Start of Main Content of Page-->
         <main class="blog-sections">
             <div class="outer-wrapper">
                 <div class="inner-wrapper">
-                    <!-- Aside (Side Bar)-->
+                    <!-- Start of Aside (Side Bar)-->
                     <aside>
                         <div class="side-bar-container">
                             <div class="img-container">
@@ -47,7 +69,7 @@
                             <!--.img-container END-->
                             <div class="txt-container">
                                 <h5>About under the sea</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos itaque esse, cum incidunt.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos itaque esse.</p>
                                 <h5>Recent posts</h5>
                                 <ul>
                                     <li>Lorem ipsum dolor sit</li>
@@ -55,20 +77,17 @@
                                     <li>Lorem ipsum dolor sit</li>
                                     <li>Lorem ipsum dolor sit</li>
                                 </ul>
-                            </div>
-                            <!--.txt-container END-->
-                        </div> 
+                            </div> <!--.txt-container END-->
+                        </div> <!--.side-bar-container END-->
                     </aside>
                     <!-- End of Aside (Side Bar)-->
-                
                     <!-- Article (Blog Section)-->
                     <article>
-                        <!-- Blog Content Section-->
+                        <!-- Start of Blog Content Section-->
                             <section class="blog-content">
                                 <div class="img-container">
                                     <img src="./assets/blog-post-image.jpg" alt="a reef with fish swimming in it">
-                                </div>
-                                <!--.txt-container END-->
+                                </div> <!--.img-container END-->
                                 <div class="txt-container">
                                     <h3>Discovering New Species</h3>
                                     <p>Monday May 4th 2019 by Dieula</p>
@@ -82,13 +101,12 @@
                                         facere! Lorem ipsum dolor sit amet consec adipisicing Maiores dolore officia nam c soluta optio nemo
                                         laudantium ut, quo nisi, ad bland consectetur inventore praesentium eveniet of cumque expedita. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nihil deleniti nulla iste earum cumque repellendus iure ab voluptatum hic possimus, autem fugit reprehenderit officia nobis rerum impedit veniam perspiciatis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus cumque aliquid, neque, reprehenderit quas sunt facere fugit doloribus omnis suscipit excepturi aliquam optio harum blanditiis similique. Quisquam odio esse tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem officiis expedita voluptatum doloribus? Sapiente fugit ad commodi eum in accusamus quaerat maiores, ipsum eius dolore laboriosam vero placeat exercitationem saepe!
                                         Pariatur magni, sint sit ea temporibus hic culpa repellendus, possimus dignissimos ipsam odio aspernatur animi consequatur excepturi, cupiditate numquam perferendis soluta doloremque eligendi eveniet doloribus enim autem. Doloribus, harum eius. </p>
-                                </div>
-                                <!--.txt-container END-->
+                                </div> <!--.txt-container END-->
                             </section>
-                            <!--.blog-content section-->
                             <!-- End of Blog Contents Section-->
-                            <!-- BComments Section-->
+                            <!-- Start of Comments Section-->
                             <section class="comments">
+                                <!-- Start of Posted Comments Section-->
                                 <div class="posted-comments">
                                     <h4>Comments:</h4>
                                     <div class="comments-box">
@@ -98,10 +116,8 @@
                                         <div class="txt-container">
                                             <p>Tuesday October 9th, 2018 by Jeremy</p>
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis voluptatum est excepturi, possimus quasi iusto quos, dolorum officia quisquam repudiandae nisi. Quod quidem molestias dignis Doloribus dignissimos asperiores accusantium neque.</p>
-                                        </div>
-                                        
-                                    </div>
-                                    <!--.comments-box END-->
+                                        </div> <!--.txt-container END-->
+                                    </div> <!--.comments-box END-->
                                     <div class="comments-box">
                                         <div class="img-container">
                                             <img src="./assets/comment-2.jpg" alt="a young caucasian girl">
@@ -113,26 +129,27 @@
                                                 iusto quos, dolorum officia quisquam repudiandae nisi. Quod quidem molestias dignissimos? Dol
                                                 dignissimos
                                                 asperiores accusantium neque.</p>
-                                        </div>
-                                        
-                                    </div>
-                                    <!--.comments-box END-->
+                                        </div> <!--.txt-container END-->
+                                    </div> <!--.comments-box END-->
                                 </div>
-                                <!--.posted-comments END-->
+                                <!-- End of of Posted Comments Section-->
+                                <!-- Start of Comments Form-->
                                 <form action="#">
                                     <div class="name-email-container">
-                                        <input type="text" id="name" placeholder="Name">
-                                        <label for="name"></label>
-                                        
-                                        <input type="text" id="email" placeholder="Email Address">
-                                        <label for="email"></label>
+                                        <div class="input-name-container">
+                                            <input type="text" id="name" placeholder="Name">
+                                            <label for="name"></label>
+                                        </div>
+                                        <div class="input-email-container">
+                                            <input type="text" id="email" placeholder="Email Address">
+                                            <label for="email"></label>
+                                        </div>
                                     </div>
-                            
-                                    <textarea id="message" rows="10" cols="50" placeholder="Comment"></textarea>
+                                    <textarea id="comment" rows="10" cols="50" placeholder="Comment"></textarea>
                                     <label for="comment"></label>
-                            
                                     <button type="submit">Post Comment</button>
                                 </form>
+                                <!-- Start of End of Comments Form-->
                             </section>
                             <!--.comments END-->
                             <!--End of Comments Section-->
@@ -144,7 +161,7 @@
         <!--End of Main-->
         <!--Footer-->
         <footer>
-            <div class="wrapper">
+            <div class="inner-wrapper">
                 <p>Copyright &copy; 2018 HackerYou</p>
             </div>
         </footer>

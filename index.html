@@ -15,36 +15,56 @@
         <script src="https://kit.fontawesome.com/a3cb5273ce.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="header">
+        <!--Start of Header Section (includes Nav Bar)-->
+        <header class="home-header">
             <div class="outer-wrapper">
                 <div class="inner-wrapper">
+                    <!--Start of Mobile Navigation Menu (Overlay Menu)-->
+                    <div class="mobile-menu-wrap"> 
+                        <input type="checkbox" class="toggler" autocomplete="off">
+                        <div class="hamburger">
+                            <div class="hamburger-icon-container">
+                            </div>
+                        </div> <!--.hamburger END-->
+                        <div class="overlay-menu">
+                            <div class="overlay-menu-sub-container-one">
+                                <div class="overlay-menu-sub-container-two">
+                                    <ul>
+                                        <li><a href="./index.html">Home</a></li>
+                                        <li><a href="./index.html#about">About</a></li>
+                                        <li><a href="./blog.html">Blog</a></li>
+                                        <li><a href="./contact.html">Contact</a></li>
+                                    </ul>
+                                </div> <!--.overlay-menu-sub-container-two END-->
+                            </div> <!--.overlay-menu-sub-container-one END-->
+                        </div> <!--.overlay-menu END-->
+                    </div> <!--.mobile-menu-wrap END-->
+                    <!--End of Mobile Navigation Menu (Overlay Menu)-->
+                    <!--Start of Primary Navigation Menu (Non-Mobile)-->
                     <nav class="primary-nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <!--END: Header Navigation-->
-                    <div class="title-container">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="./blog.html">Blog</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul> 
+                    </nav> <!--.primary-nav END-->
+                    <!--End of Primary Navigation Menu (Non-Mobile)-->
+                    <div class="header-title-container">
                         <h1>Under the Sea</h1>
-                    </div>
-                    <div class="img-container">
+                    </div> <!--.header-title-container END-->
+                    <div class="header-img-container">
                         <img src="./assets/home-box-header.png" alt="three goldfish swimming in the ocean">
-                    </div>
-                </div>
-                <!--END: Inner-Wrapper (Wrapper for Content)-->
-            </div>
-            <!--END: Outer-Wrapper (Wrapper for Bleeding Non-Background Images)-->
+                    </div> <!--.header-img-container END-->
+                </div> <!--.inner-wrapper END-->
+            </div> <!--.outer-wrapper END-->
         </header>
-        <!--END: Header-->
-        <!--START: Main Sections-->
+        <!--End of Header Section-->
+        <!--Start of Main Content of Page-->
         <main>
-            <!--START: About Section-->
-            <section class="about-section">
+            <!--Start of About Section-->
+            <section class="about-section" id="about">
                 <div class="outer-wrapper">
-                    <!--START: Inner-Wrapper (Wrapper for Content)-->
                     <div class="inner-wrapper">
                         <h3>What is under the sea?</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officiis quam placeat magni consequatur quis
@@ -53,84 +73,71 @@
                             necessitatibus voluptatibus cupiditate eos et porro debitis.
                         </p>
                         <a href="#" class="find-out-more">Find out More</a>
-                    </div>
-                    <!--END: Inner-Wrapper (Wrapper for Content)-->
-                </div>
+                    </div> <!--.inner-wrapper END-->
+                </div> <!--.outer-wrapper END-->
             </section>
-            <!--END: About Section-->
-            <!--START: Read More Section-->
+            <!--End of About Section-->
+            <!--Start of Read More Section-->
             <section class="read-more-section">
-                <!--START: Outer-Wrapper (Wrapper for Bleeding Non-Background Images)-->
                 <div class="outer-wrapper">
-                    <!--START: Inner-Wrapper (Wrapper for Content)-->
                     <div class="inner-wrapper">
                         <div class="img-container-left">
                             <img src="./assets/left-image.jpg" alt="Female looking at a tank of fish in an aquarium">
-                        </div>
-                        <!--.img-container END-->
+                        </div> <!--.img-container END-->
                         <div class="txt-container-right">
                             <h4>New Additions</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ratione? Vero velit aliquam, totam quia
                                 cupiditate, libero non provident deleniti perspiciatis architecto aut quae dolore a porro minus numquam.</p>
                             <a href="#" class="read-more">Read More</a>
-                        </div>
-                        <!--.txt-container END-->
+                        </div> <!--.txt-container END-->
                         <div class="txt-container-left">
                             <h4>Meet Real Nemo</h4>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, consequuntur. Ex unde maiores
                                 voluptatibus ea, accusamus officia deserunt aut soluta quae eaque, corrupti ab, sequi expedita ducimus.</p>
                             <a href="#" class="read-more">Read More</a>
-                        </div>
-                        <!--.txt-container END-->
+                        </div> <!--.txt-container END-->
                         <div class="img-container-right">
                             <img src="./assets/right-image.jpg" alt="a single ocellaris clownfish swimming alone in the ocean">
-                        </div>
-                        <!--.img-container END-->
-                    </div>
-                    <!--.wrapper END-->
-                </div>
+                        </div> <!--.img-container END-->
+                    </div> <!--.inner-wrapper END-->
+                </div> <!--.outer-wrapper END-->
             </section>
-            <!--.what-is-under-the-sea END-->
-            <!--End of Section #2-->
-            <!--Section #3-->
+            <!--End of Read More Section-->
+            <!--Start of Additional Info Section-->
             <section class="additional-info-section">
                 <div class="outer-wrapper">
                     <div class="inner-wrapper">
                         <div class="info-container">
                             <div class="icon-container">
                                 <i class="fa-solid fa-location-arrow"></i>
-                            </div>
+                            </div> <!--.icon-container END-->
                             <div class="txt-container">
                                 <h4>Locations</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt perspiciatis odio consequuntur voluptatum
                                     providentquidem opt comducimus.</p>
-                            </div>
-                        </div>
-                        <!--.info-container END-->
+                            </div> <!--.txt-container END-->
+                        </div> <!--.info-container END-->
                         <div class="info-container">
                             <div class="icon-container">
                                 <i class="fa-solid fa-users"></i>
-                            </div>
+                            </div> <!--.icon-container END-->
                             <div class="txt-container">
                                 <h4>Community</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt perspiciatis odio consequuntur voluptatum
                                     provident quidem opt com ducimus nulla.</p>
-                            </div>
-                    
-                        </div>
-                        <!--.info-container END-->
+                            </div> <!--.txtcontainer END-->
+                        </div> <!--.info-container END-->
                         <div class="info-container">
                             <div class="icon-container">
                                 <i class="fa-solid fa-file"></i>
-                            </div>
+                            </div> <!--.icon-container END-->
                             <div class="txt-container">
                                 <h4>Blog</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt perspiciatis odio consequuntur voluptatum
                                     provident quidem opt commodi qui.
                                 </p>
-                            </div>
-                        </div>
-                        <!--.info-container END-->
+                            </div> <!--.txtcontainer END-->
+                        </div> <!--.info-container END-->
                         <div class="info-container">
                             <div class="icon-container">
                                 <i class="fa-solid fa-phone-flip"></i>
@@ -140,30 +147,25 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt perspiciatis odio consequuntur voluptatum
                                     provident quidem opt commodi qui ducimus.
                                 </p>
-                            </div>
-                        </div>
-                        <!--.info-container END-->
-                    </div>
-                    <!--.wrapper END-->
-                </div>
+                            </div> <!--.txtcontainer END-->
+                        </div> <!--.info-container END-->
+                    </div> <!--.inner-wrapper END-->
+                </div> <!--.outer-wrapper END-->
             </section>
-            <!--.locations-community-blog-contanct END-->
-            <!--End of Section #3-->
-            <!--Section #4-->
+            <!--End of Additional Info Section-->
+            <!--Start of Banner Image Section-->
             <section class="whale-img-banner">
                 <img src="./assets/banner.jpg"
                     alt="a female putting her hand against the glass of a tank with a whale or large fish swimming in it">
             </section>
-            <!--.whale-img-banner END-->
-            <!--End of Section #4-->
-            <!--Section #5-->
+            <!--End of Banner Image Section-->
+            <!--Start of This Month Profile Section-->
             <section class="this-month-profile">
                 <div class="outer-wrapper">
                     <div class="inner-wrapper">
                         <div class="img-container">
                             <img src="./assets/small-box.jpg" alt="a school of fish swimming towards the right">
-                        </div>
-                        <!--.img-container END-->
+                        </div> <!--.img-container END-->
                         <div class="txt-container">
                             <h3>This Month Profile</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam nostrum quaerat corrupti. Minus,dolores
@@ -171,35 +173,39 @@
                                 laudantium voluptas dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eaque quo
                                 voluptatem ad illo nam natus aperiam repellat reprehenderit nobis facilis cum, voluptate.</p>
                             <a href="#" class="find-out-more">Find out More</a>
-                        </div>
-                        <!--.txt-container END-->
-                    </div>
-                </div>
+                        </div> <!--.txt-container END-->
+                    </div> <!--.inner-wrapper END-->
+                </div> <!--.outer-wrapper END-->
             </section>
-            <!--End of Section #5-->
-            <!--Section #6 (Gallery)-->
+            <!--End of This Month Profile Section-->
+            <!--Start of Gallery Section-->
             <section class="gallery">
                 <div class="outer-wrapper">
                     <div class="inner-wrapper">
                         <ul>
-                            <li><img src="./assets/gallery-image-1.jpg" alt="girl standing against aquarium glass"></li>
-                            <li><img src="./assets/gallery-image-2.jpg"
-                                    alt="group of people standing against aquarium glass watching a giant fish or whale swim by"></li>
-                            <li><img src="./assets/gallery-image-3.jpg" alt="an underwater shot of a school of fish"></li>
+                            <li><img src="./assets/gallery-image-1.jpg" 
+                                     alt="girl standing against aquarium glass">
+                            </li>
+                            <li>
+                                <img src="./assets/gallery-image-2.jpg"
+                                     alt="group of people standing against aquarium glass watching a giant fish or whale swim by">
+                            </li>
+                            <li><img src="./assets/gallery-image-3.jpg" 
+                                     alt="an underwater shot of a school of fish">
+                            </li>
                         </ul>
-                    </div>
-                    <!--.wrapper END-->
-                </div>
+                    </div> <!--.inner-wrapper END-->
+                </div> <!--.outer-wrapper END-->
             </section>
-            <!--.gallery END-->
-            <!--End of Section #5-->
+            <!--End of Gallery Section-->
         </main>
-        <!--END: Main Sections-->
+        <!--End of Main Content of Page-->
         <!--Footer-->
+        <!--Start of Footer-->
         <footer>
-            <div class="wrapper">
+            <div class="inner-wrapper">
                 <p>Copyright &copy; 2018 HackerYou</p>
-            </div>
+            </div> <!--.inner-wrapper END-->
         </footer>
         <!--End of Footer-->
     </body>

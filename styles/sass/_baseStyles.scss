@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Base Styles Partial */
 
 body {
     background: $secondary; // Dark Blue Grey
@@ -9,30 +9,39 @@ body {
     margin: 0 auto;
     width: 90%;
     max-width: 1400px;
-    
+    height: 100%;
+
 }
 
 .inner-wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
+    height: 100%;
     
 }
 
 ul, li, a, input {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
+
 
 ul {
     list-style: none;
 }
 
 a {
+    transition: 0.3s;
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-    transition: 0.3s;
+    
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 .find-out-more {
@@ -70,11 +79,11 @@ form {
     
     textarea {
         @include fontSize(20);
-        font-family: $bodyFont;
         border: 2px solid $quaternary;
-        padding-left: 20px;
-        padding-top: 20px;
+        padding-left: 1rem;
+        padding-top: 1rem;
         background: transparent;
+        font-family: $bodyFont;        
         color: $primary;
 
         &::placeholder {
@@ -86,12 +95,15 @@ form {
     button {
         background: $tertiary;
         border: none;
-        padding: 10px;
+        padding: 0.5rem;
+        cursor: pointer;
     }
 }
 
 img {
-    width: 100%;
     display: block;
+    width: 100%;
 }
+
+
 

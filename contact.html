@@ -16,59 +16,90 @@
     </head>
     <body>
         <!--Header-->
-        <header class="header contact-header">
-            <div class="inner-wrapper">
-                <nav class="priamry-nav">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="title-container">
-                    <h2>Get in Touch</h2>
-                </div>
-                
-            </div>
-            <!--.inner-inner-wrapper END-->
+        <header class="contact-header">
+            <div class="outer-wrapper">
+                <div class="inner-wrapper">
+                    <!--Start of Mobile Navigation Menu (Overlay Menu)-->
+                    <div class="mobile-menu-wrap">
+                        <input type="checkbox" class="toggler">
+                        <div class="hamburger">
+                            <div class="hamburger-icon-container">
+                            </div>
+                        </div> <!--.hamburger END-->
+                        <div class="overlay-menu">
+                            <div class="overlay-menu-sub-container-one">
+                                <div class="overlay-menu-sub-container-two">
+                                    <ul>
+                                        <li><a href="./index.html">Home</a></li>
+                                        <li><a href="./index.html#about">About</a></li>
+                                        <li><a href="./blog.html">Blog</a></li>
+                                        <li><a href="./contact.html">Contact</a></li>
+                                    </ul>
+                                </div> <!--.overlay-menu-sub-container-two END-->
+                            </div> <!--.overlay-menu-sub-container-one END-->
+                        </div> <!--.overlay-menu END-->
+                    </div> <!--.mobile-menu-wrap END-->
+                    <!--End of Mobile Navigation Menu (Overlay Menu)-->
+                    <!--Start of Primary Navigation Menu (Non-Mobile)-->
+                    <nav class="primary-nav">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./index.html#about">About</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!--.primary-nav END-->
+                    <div class="title-container">
+                        <h2>Get in Touch</h2>
+                    </div> <!--.title-container END-->
+                </div> <!--.inner-wrapper END-->
+            </div> <!--.outer-wrapper END-->
         </header>
-        <!--End of Header-->
+        <!--End of Header Section-->
+        <!--Start of Main Content of Page-->
         <main>
             <!--Contact Section-->
             <section class="contact">
-                <div class="inner-wrapper">
-                    <div class="contact-info-container">
-                        <ul>
-                            <li><i class="fa-brands fa-facebook-f"></i></li>
-                            <li><i class="fa-brands fa-instagram"></i></li>
-                            <li><i class="fa-brands fa-twitter"></i></li>
-                            <li><i class="fa-brands fa-whatsapp"></i></li>
-                        </ul>
-                        <h5>info@email.com</h5>
-                        <p>123-456-7890</p>
-                        <p>123 Queen Street West, Unit 10</p>
-                        <p>Toronto, Ontario</p>
-                        <p>M5V2D5</p>
-                    </div> <!--.contact-info-container END-->
-                    <form class="contact-form-container" action="#">
-                        <div class="name-email-container">
-                            <input type="text" id="name" placeholder="Name">
-                            <label for="name"></label>
-                            
-                            <input type="text" id="email" placeholder="Email Address">
-                            <label for="email"></label>
-                        </div>                       
-                        <textarea id="message" rows="10" cols="50" placeholder="Message"></textarea>
-                        <label for="message"></label>
-                        
-                        <button type="submit">Submit</button>
-                    </form>
-                </div> <!--.wrapper END-->
+                <div class="outer-wrapper">
+                    <div class="inner-wrapper">
+                        <div class="contact-info-container">
+                            <ul>
+                                <li><i class="fa-brands fa-facebook-f"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+                                <li><i class="fa-brands fa-whatsapp"></i></li>
+                            </ul>
+                            <a href="#"><h5>info@email.com</h5></a>
+                            <p>123-456-7890</p>
+                            <p>123 Queen Street West, Unit 10</p>
+                            <p>Toronto, Ontario</p>
+                            <p>M5V2D5</p>
+                        </div> <!--.contact-info-container END-->
+                        <!--Start of Comments Form-->
+                        <form action="#">
+                            <div class="name-email-container">
+                                <div class="input-name-container">
+                                    <input type="text" id="name" placeholder="Name">
+                                    <label for="name"></label>
+                                </div> <!--.input-name-container END-->
+                                <div class="input-email-container">
+                                    <input type="text" id="email" placeholder="Email Address">
+                                    <label for="email"></label>
+                                </div> <!--.input-email-container END-->
+                            </div>
+                            <textarea id="message" rows="10" cols="50" placeholder="Message"></textarea>
+                            <label for="message"></label>
+                            <button type="submit">Submit</button>
+                        </form>
+                        <!--Start of Comments Form-->
+                    </div> <!--.inner-wrapper END-->
+                </div><!--.outer-wrapper END-->
             </section> <!--.contact END-->
             <!-- End of Contact Section-->
         </main>
-        <!--Footer-->
+        <!--End of Main Content of Page-->
+        <!--Start of Footer-->
         <footer>
             <div class="inner-wrapper">
                 <p>Copyright &copy; 2018 HackerYou</p>

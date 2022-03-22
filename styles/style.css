@@ -1,3 +1,4 @@
+/* Setup Partial */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -226,7 +227,7 @@ html {
   overflow: hidden;
 }
 
-/* Mixins */
+/* Mixins Partial */
 /* Variables Partial */
 /* Colours:
 - primary text (white): #FFFFFF
@@ -238,7 +239,7 @@ html {
 - headings, nav, and buttons: Barlow, Bold
 - body: lato, Regular
 */
-/* Typography */
+/* Typography Partial */
 html {
   font-size: 125%;
 }
@@ -260,14 +261,14 @@ h1 {
   font-size: 6.9rem;
   line-height: 6.3rem;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 h2 {
   font-size: 4rem;
   line-height: 4.6rem;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 h3 {
@@ -275,22 +276,22 @@ h3 {
   line-height: 2.1rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin-bottom: 20px;
   text-align: center;
+  margin: 0;
 }
 
 h4 {
   font-size: 1.6rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 h5 {
   font-size: 1.4rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 nav li, a {
@@ -301,8 +302,7 @@ nav li, a {
   text-transform: uppercase;
   text-align: center;
   vertical-align: center;
-  padding: 10;
-  margin: 10;
+  margin: 0;
 }
 
 button {
@@ -310,9 +310,10 @@ button {
   line-height: 1.6rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  margin: 0;
 }
 
-/* Base Styles */
+/* Base Styles Partial */
 body {
   background: #0C1423;
 }
@@ -322,17 +323,19 @@ body {
   margin: 0 auto;
   width: 90%;
   max-width: 1400px;
+  height: 100%;
 }
 
 .inner-wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+  height: 100%;
 }
 
 ul, li, a, input {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -340,11 +343,16 @@ ul {
 }
 
 a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   text-decoration: none;
   cursor: pointer;
   color: inherit;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .find-out-more {
@@ -396,11 +404,11 @@ form input::placeholder {
 }
 form textarea {
   font-size: 1rem;
-  font-family: "Lato";
   border: 2px solid #86E0F9;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding-left: 1rem;
+  padding-top: 1rem;
   background: transparent;
+  font-family: "Lato";
   color: #FFFFFF;
 }
 form textarea::-webkit-input-placeholder {
@@ -426,144 +434,313 @@ form textarea::placeholder {
 form button {
   background: #0F614E;
   border: none;
-  padding: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
-/* Header Styles */
-.header {
-  background: rgba(0, 0, 0, 0.5) url(../assets/header-image.jpg);
-  background-blend-mode: darken;
-  background-size: cover;
+/*  ================================================== 
+    Header Styles - CSS Styling for Header (All Pages)
+    ==================================================*/
+/*  General Header Styling
+    ====================== */
+header {
+  height: 70vh;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
-  position: relative;
+  background-size: cover;
+  /* Navigation Bar Styles */
 }
-.header .inner-wrapper {
+header .inner-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-.header .inner-wrapper .title-container {
-  width: 50%;
-  margin: 125px 0px 0px 0px;
+header .mobile-menu-wrap {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  display: none;
+  /* Toggler animation when clicked (checked) */
+  /* Shows menu when toggler clicked (checked) */
+  /* Tover animation when toggler hovered over when clicked (checked state) */
+  /* Overlay menu styling */
 }
-.header .inner-wrapper h1 {
-  margin: 0;
-  width: 75%;
-}
-.header .inner-wrapper .img-container {
-  width: 50%;
-  margin: 125px 0px 0px 0px;
-}
-.header .inner-wrapper img {
+header .mobile-menu-wrap .toggler {
   position: absolute;
-  width: 55%;
-  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
-.header .primary-nav {
+header .mobile-menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background-color: #86E0F9;
+  /* Hamburger line (middle line) */
+  /* Hamburger lines (top and bottom) lines */
+  /* Moves bottom hamburger line down */
+}
+header .mobile-menu-wrap .hamburger .hamburger-icon-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: all;
+      -ms-flex-pack: all;
+          justify-content: all;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   width: 100%;
-  padding-top: 40px;
+  height: 2px;
+  background-color: #0C1423;
 }
-.header .primary-nav ul {
+header .mobile-menu-wrap .hamburger > div:before, header .mobile-menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+header .mobile-menu-wrap .hamburger > div:after {
+  top: 10px;
+}
+header .mobile-menu-wrap .toggler:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  /* Turns hamburger lines into an X (when clicked) */
+}
+header .mobile-menu-wrap .toggler:checked + .hamburger > div:before, header .mobile-menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+header .mobile-menu-wrap .toggler:checked ~ .overlay-menu {
+  visibility: visible;
+}
+header .mobile-menu-wrap .toggler:checked ~ .overlay-menu > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+}
+header .mobile-menu-wrap .toggler:checked ~ .overlay-menu > div > div {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+header .mobile-menu-wrap .toggler:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+header .mobile-menu-wrap .overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+header .mobile-menu-wrap .overlay-menu > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  width: 400vw;
+  height: 400vw;
+  border-radius: 50%;
+  background: rgba(12, 20, 35, 0.9);
+}
+header .mobile-menu-wrap .overlay-menu > div > div {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  max-width: 90vw;
+  max-height: 100vh;
+  text-align: center;
+}
+header .mobile-menu-wrap .overlay-menu ul li {
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+header .mobile-menu-wrap .overlay-menu ul li:hover {
+  color: #86E0F9;
+}
+header .primary-nav {
+  width: 100%;
+  padding: 2rem 0rem 0rem 0rem;
+}
+header .primary-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-left: 20px;
 }
-.header .primary-nav li {
-  margin-left: 60px;
+header .primary-nav li {
+  margin: 0rem 0rem 0rem 3rem;
 }
-.header .primary-nav li:hover {
+header .primary-nav li:hover {
   color: #86E0F9;
 }
 
-.blog-header {
-  background: url(../assets/blog-header.jpg);
-  background-size: cover;
+/*  Home Page Specific Header Styling
+    ======================== */
+.home-header {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5) url(../assets/header-image.jpg);
+  background-blend-mode: darken;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
+  background-size: cover;
+  /* Header Title Styles */
+  /* Header Image Styles (Non-background) */
 }
-.blog-header .inner-wrapper .title-container {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  padding: 0;
-  margin: 0 auto;
-}
-.blog-header h2 {
-  width: 100%;
-  text-align: center;
-  margin: 0px;
-  padding: 200px 0px 200px 0px;
-}
-.blog-header .img-container {
+.home-header .header-title-container {
+  margin: -4rem 0rem 0rem 0rem;
   width: 50%;
+}
+.home-header .header-title-container h1 {
+  width: 75%;
+}
+.home-header .header-img-container {
+  margin: 4rem 0rem 0rem 0rem;
+  width: 50%;
+}
+.home-header .header-img-container img {
   position: absolute;
-  top: 175px;
-  right: 0px;
+  top: 150px;
+  right: 0;
+  width: 55%;
 }
 
+/*  Blog Page Specific Header Styling
+    ======================== */
+.blog-header {
+  background: url(../assets/blog-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Header Title Styles */
+}
+.blog-header .title-container {
+  margin: 0 auto;
+  width: 100%;
+}
+.blog-header .title-container h2 {
+  width: 100%;
+  text-align: center;
+}
+
+/*  Contact Page Specific Header Styling
+    ======================== */
 .contact-header {
   background: url(../assets/contact-header.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
+  /* Header Title Styles */
 }
-.contact-header .inner-wrapper .title-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
+.contact-header .title-container {
   margin: 0 auto;
+  width: 100%;
 }
-.contact-header h2 {
+.contact-header .title-container h2 {
+  width: 100%;
+  padding: 10rem 0rem 10rem 0rem;
   text-align: center;
-  margin: 0px;
-  padding: 200px 0px 200px 0px;
 }
 
-/* Section Styles */
+/*  =============================================
+    Section Styles - CSS Styling for Main Content 
+    =============================================*/
+/*  Index Page (Home Page) Styling
+    ============================== */
+/* About Section (What is Under the Sea) Styles */
 .about-section {
-  padding: 200px 200px 220px 200px;
+  padding: 9rem 10rem 10rem 10rem;
 }
 .about-section .inner-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.about-section .inner-wrapper h3 {
+.about-section h3 {
   width: 100%;
 }
-.about-section .inner-wrapper p {
+.about-section p {
   width: 100%;
-  margin-bottom: 40px;
+  margin: 1rem 0rem 2rem 0rem;
 }
 
+/* Read More Section (New Additions and Meet Real Nemo) Styles */
 .read-more-section {
   background: #0F614E;
-  padding-bottom: 50px;
+  padding: 2.5rem 0rem 2.5rem 0rem;
 }
 .read-more-section .inner-wrapper {
   display: -webkit-box;
@@ -572,33 +749,38 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.read-more-section .inner-wrapper .txt-container-right {
-  margin: 10px 0px 0px 120px;
+.read-more-section .txt-container-right {
+  margin: 1rem 0rem 0rem 6rem;
   width: calc(50% - 120px);
 }
-.read-more-section .inner-wrapper .txt-container-left {
-  margin: 0px 120px 10px 0px;
+.read-more-section .txt-container-right p {
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+.read-more-section .txt-container-left {
+  margin: 1rem 6rem 0rem 0rem;
   width: calc(50% - 120px);
   text-align: right;
 }
-.read-more-section .inner-wrapper .img-container-left {
-  margin-right: 100px;
-  margin-bottom: 400px;
+.read-more-section .txt-container-left p {
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+.read-more-section .img-container-left {
+  margin: 0rem 5rem 20rem 0rem;
   width: calc(50% - 100px);
 }
-.read-more-section .inner-wrapper .img-container-left img {
+.read-more-section .img-container-left img {
   width: 40%;
   position: absolute;
-  top: -50px;
+  top: -100px;
   left: 0px;
   -webkit-box-shadow: 45px 45px 0 #86E0F9;
           box-shadow: 45px 45px 0 #86E0F9;
 }
-.read-more-section .inner-wrapper .img-container-right {
-  margin-left: 100px;
+.read-more-section .img-container-right {
+  margin: 0rem 0rem 0rem 5rem;
   width: calc(50% - 100px);
 }
-.read-more-section .inner-wrapper .img-container-right img {
+.read-more-section .img-container-right img {
   width: 40%;
   position: absolute;
   bottom: -50px;
@@ -607,8 +789,9 @@ img {
           box-shadow: -45px 45px 0 #86E0F9;
 }
 
+/* Additional Info Section (Locations, Community, Blog, Get in Touch) Styles */
 .additional-info-section {
-  padding: 125px 0px 50px 0px;
+  padding: 6.25rem 0rem 3rem 0rem;
 }
 .additional-info-section .inner-wrapper {
   display: -webkit-box;
@@ -622,29 +805,30 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  margin-bottom: 25px;
+  margin: 0rem 0rem 1.25rem 0rem;
 }
 .additional-info-section .icon-container {
   width: calc(5% - 37.5px);
-  margin-right: 75px;
+  margin: 0rem 3.75rem 0rem 0rem;
 }
 .additional-info-section .icon-container i {
   font-size: 1.25rem;
   background: #86E0F9;
   color: #0C1423;
   border-radius: 50%;
-  padding: 12px;
+  padding: 0.6rem;
 }
 .additional-info-section .txt-container {
   width: calc(95% - 37.5px);
-  margin-top: 10px;
+  margin: 0.5rem 0rem 0rem 0rem;
 }
 .additional-info-section .txt-container h4 {
-  margin: 0px;
+  margin: 0rem 0rem 1rem 0rem;
 }
 
+/* This Month Profile Section Styles */
 .this-month-profile {
-  padding: 125px 0px 100px 0px;
+  padding: 6.25rem 0rem 6rem 0rem;
 }
 .this-month-profile .inner-wrapper {
   display: -webkit-box;
@@ -652,30 +836,30 @@ img {
   display: flex;
 }
 .this-month-profile .img-container {
-  width: 25%;
-  margin-right: 100px;
+  width: 30%;
+  margin: 0rem 4rem 0rem 0rem;
 }
 .this-month-profile .img-container img {
   -webkit-box-shadow: 45px 45px 0 #86E0F9;
           box-shadow: 45px 45px 0 #86E0F9;
 }
 .this-month-profile .txt-container {
-  width: 75%;
-  margin-left: 50px;
+  width: 70%;
+  margin: 0rem 0rem 0rem 2.5rem;
 }
 .this-month-profile .txt-container h3 {
   text-align: left;
-  margin: 0px;
 }
 .this-month-profile .txt-container p {
-  margin-bottom: 50px;
+  margin: 1rem 0rem 2.5rem 0rem;
 }
 
+/* Gallery Section Styles */
 .gallery {
   background: #0F614E;
-  padding: 100px 0px 100px 0px;
+  padding: 5rem 0rem 5rem 0rem;
 }
-.gallery .inner-wrapper ul {
+.gallery ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,22 +867,16 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.gallery .inner-wrapper ul li {
+.gallery ul li {
   width: 32%;
 }
 
-footer {
-  background: #86E0F9;
-  color: #0C1423;
-}
-footer p {
-  margin: 0px;
-  padding: 5px;
-  text-align: center;
-}
-
+/*  Blog Page (Home Page) Styling
+    ============================== */
 .blog-sections {
-  padding-bottom: 100px;
+  padding: 0rem 0rem 5rem 0rem;
+  /* Aside Section Styling */
+  /* Article Section (Blog) Stying */
 }
 .blog-sections .inner-wrapper {
   display: -webkit-box;
@@ -707,57 +885,66 @@ footer p {
 }
 .blog-sections aside {
   width: 35%;
-  margin-right: 60px;
-  padding-top: 120px;
+  margin: 0rem 3rem 0rem 0rem;
+  padding: 6rem 0rem 0rem 0rem;
 }
 .blog-sections aside .side-bar-container {
   background: #0F614E;
-  padding-top: 400px;
-  padding-bottom: 30px;
+  padding: 0rem 0rem 1.5rem 0rem;
+  position: relative;
 }
-.blog-sections aside img {
-  width: 33%;
-  position: absolute;
-  top: 100px;
-  left: -20px;
+.blog-sections aside .img-container {
+  width: 120%;
+  position: relative;
+  top: -25px;
+  right: 100px;
+}
+.blog-sections aside .img-container img {
+  width: 100%;
 }
 .blog-sections aside .txt-container {
-  margin-left: 25px;
-}
-.blog-sections aside h5 {
-  margin: 0px;
+  margin-left: 1.25rem;
 }
 .blog-sections aside p {
-  margin: 15px 0px 60px 0px;
+  margin: 0.75rem 0rem 3rem 0rem;
 }
 .blog-sections aside ul {
   list-style: disc;
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 .blog-sections article {
   width: 75%;
+  /* Blog Content Subsection Styling */
+  /* Comment Section Subsection Styling */
+  /* Comments Form Styling */
 }
 .blog-sections article .blog-content {
   border-left: 5px solid #86E0F9;
   border-bottom: 5px solid #86E0F9;
-  padding-top: 400px;
+  position: relative;
 }
-.blog-sections article .blog-content .img-container img {
-  width: 65%;
-  position: absolute;
-  top: -260px;
-  right: -77px;
+.blog-sections article .blog-content .img-container {
+  position: relative;
+  width: 110%;
+  top: -230px;
+  left: 40px;
   -webkit-box-shadow: -45px 45px 0 #86E0F9;
           box-shadow: -45px 45px 0 #86E0F9;
 }
-.blog-sections article .txt-container {
-  margin-left: 50px;
+.blog-sections article .blog-content .img-container img {
+  width: 100%;
 }
-.blog-sections article h3, .blog-sections article p {
+.blog-sections article .blog-content .txt-container {
+  margin: -7.5rem 0rem 0rem 2.5rem;
+}
+.blog-sections article .blog-content p {
+  margin-bottom: 1rem;
+}
+.blog-sections article .blog-content h3, .blog-sections article .blog-content p {
   text-align: left;
 }
-.blog-sections article p:first-of-type {
-  margin-bottom: 50px;
+.blog-sections article .blog-content p:first-of-type {
+  margin-bottom: 2.5rem;
 }
 .blog-sections article .posted-comments {
   display: -webkit-box;
@@ -765,63 +952,86 @@ footer p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 50px;
+  margin-left: 2.5rem;
 }
 .blog-sections article .posted-comments .comments-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 5rem;
 }
 .blog-sections article .posted-comments h4 {
   width: 100%;
-  margin-bottom: 20px;
+  margin: 2rem 0rem 1rem 0rem;
 }
 .blog-sections article .posted-comments .img-container {
-  width: 20%;
+  width: 15%;
+  margin: 0.5rem 1.5rem 0rem 0rem;
 }
 .blog-sections article .posted-comments .txt-container {
-  width: 80%;
+  width: 85%;
 }
 .blog-sections article .posted-comments p {
   margin: 0;
   padding: 0;
 }
 .blog-sections article .posted-comments p:first-of-type {
-  margin-bottom: 15px;
+  margin-bottom: 0.75rem;
 }
 .blog-sections article form .name-email-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.blog-sections article form .name-email-container input {
-  width: calc(50% - 30px);
-  margin-left: 30px;
-  margin-bottom: 40px;
+.blog-sections article form .input-name-container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.blog-sections article form .input-email-container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.blog-sections article form input {
+  width: 95%;
+  margin-bottom: 2rem;
 }
 .blog-sections article form textarea {
-  margin-left: 30px;
-  margin-bottom: 50px;
-  width: calc(100% - 30px);
+  margin-bottom: 2.5rem;
+  width: 100%;
 }
 .blog-sections article form button {
-  margin-left: 30px;
-  width: calc(100% - 30px);
+  width: 100%;
+}
+.blog-sections article form button:hover, .blog-sections article form button:focus {
+  background: rgba(15, 97, 78, 0.7);
 }
 
+/*  Contact Page Styling
+    ============================== */
+/* Contact Page Container and Children Styling */
 .contact {
-  padding: 150px 0px 150px 0px;
+  padding: 7.5rem 0rem 0rem 0rem;
+  /* Contact Page Contact Info Section Styling */
+  /* Comments Form Styling */
 }
 .contact .inner-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 .contact .contact-info-container {
   display: -webkit-box;
@@ -831,7 +1041,8 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 30%;
+  width: 35%;
+  margin-right: 3rem;
 }
 .contact .contact-info-container ul {
   display: -webkit-box;
@@ -845,21 +1056,23 @@ footer p {
 .contact .contact-info-container h5 {
   margin-top: 25px;
   margin-bottom: 20px;
+  text-align: left;
 }
 .contact .contact-info-container p {
   margin: 0;
 }
-.contact .contact-form-container {
-  width: 70%;
+.contact form {
+  width: 100%;
+  position: relative;
+  top: -375px;
+  right: -25px;
   background: #0F614E;
-  padding: 100px 50px 100px 50px;
-  position: absolute;
-  top: -425px;
-  right: 0;
+  padding: 4rem 2.5rem 2.5rem 2.5rem;
+  margin-bottom: -10rem;
   -webkit-box-shadow: -45px 45px 0 #86E0F9;
           box-shadow: -45px 45px 0 #86E0F9;
 }
-.contact .contact-form-container .name-email-container {
+.contact form .name-email-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,136 +1081,186 @@ footer p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.contact .contact-form-container input {
-  width: 48%;
-  margin-bottom: 50px;
+.contact form .input-name-container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
-.contact .contact-form-container textarea {
+.contact form .input-email-container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.contact form input {
+  width: 95%;
+  margin-bottom: 2rem;
+}
+.contact form textarea {
+  margin-bottom: 2.5rem;
   width: 100%;
 }
-.contact .contact-form-container button {
-  margin-top: 50px;
+.contact form button {
+  width: 100%;
+  margin-top: 0;
   width: 100%;
   text-align: center;
   background: #0C1423;
 }
+.contact form button:hover, .contact form button:focus {
+  background: rgba(12, 25, 30, 0.8);
+}
 
+/*  ================================================== 
+   Footer Styles - CSS Styling for Footer (All Pages)
+    ==================================================*/
+footer {
+  background: #86E0F9;
+  color: #0C1423;
+}
+footer p {
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Major Breakpoint #1 - Smaller Desktop Screens */
 @media screen and (max-width: 1024px) {
-  /* Home Page Styles */
-  .read-more-section .inner-wrapper .img-container-left {
-    margin-right: 0;
-    margin-bottom: 0;
-    padding-top: 100px;
+  /*  Home Page Specific Styles
+  ======================================================================= */
+  /* Header Styles */
+  .home-header .header-title-container {
+    margin: -6.5rem 0rem 0rem 0rem;
   }
-  .read-more-section .inner-wrapper .img-container-left img {
+  .home-header .header-title-container h1 {
+    font-size: 6.1rem;
+    line-height: 5.5rem;
+  }
+
+  /* About Section (What is Under the Sea) Styles */
+  .about-section {
+    padding: 7rem 6.5rem 7rem 6.5rem;
+  }
+
+  .read-more-section .img-container-left {
+    margin: 1rem 0rem 0rem 0rem;
+  }
+  .read-more-section .img-container-left img {
     position: static;
     width: 100%;
     -webkit-box-shadow: 20px 20px 0 #86E0F9;
             box-shadow: 20px 20px 0 #86E0F9;
   }
-  .read-more-section .inner-wrapper .img-container-right {
-    margin-left: 0;
-    margin-top: 0;
-    padding-top: 100px;
+  .read-more-section .img-container-right {
+    margin: 5rem 0rem 0rem 0rem;
   }
-  .read-more-section .inner-wrapper .img-container-right img {
-    width: 100%;
+  .read-more-section .img-container-right img {
     position: static;
+    width: 100%;
     -webkit-box-shadow: -20px 20px 0 #86E0F9;
             box-shadow: -20px 20px 0 #86E0F9;
   }
 
-  /* Blog Page Styles */
-  .blog-sections aside .side-bar-container {
-    padding: 250px 0px 50px 0px;
+  /*  Blog Page Specific Styles
+   ======================================================================== */
+  /* Blog Section (What is Under the Sea) Styles */
+  .blog-sections {
+    /* Aside Section Styles */
+    /* Article Section Styles */
   }
-  .blog-sections article .blog-content {
-    padding: 200px 0px 0px 0px;
+  .blog-sections aside .img-container {
+    right: 75px;
   }
-  .blog-sections article .blog-content .img-container img {
-    -webkit-box-shadow: -20px 20px 0 #86E0F9;
-            box-shadow: -20px 20px 0 #86E0F9;
+  .blog-sections article .blog-content .img-container {
+    -webkit-box-shadow: -25px 25px 0 #86E0F9;
+            box-shadow: -25px 25px 0 #86E0F9;
+    left: 20px;
+  }
+
+  /*  Contact Page Specific Styles
+  ========================================================================= */
+  .contact form {
+    -webkit-box-shadow: -25px 25px 0 #86E0F9;
+            box-shadow: -25px 25px 0 #86E0F9;
+  }
+  .contact .contact-info-container h5 {
+    overflow-wrap: break-word;
   }
 }
+/* Major Breakpoint #2 - Tablets */
 @media screen and (max-width: 768px) {
-  /* Home Page Styles */
-  .header .primary-nav ul {
-    margin: 0;
+  /*  General Styles
+  =======================================================================*/
+  header .primary-nav ul {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin: 0;
   }
-  .header .primary-nav ul li {
+  header .primary-nav li {
     margin: 0;
   }
 
-  h1 {
+  /*  Home Page Specific Styles
+  =======================================================================*/
+  /* Header Styles */
+  .home-header .header-title-container {
+    margin: -8.5rem 0rem 0rem 0rem;
+  }
+  .home-header .header-title-container h1 {
     font-size: 5rem;
     line-height: 4.6rem;
   }
 
+  /* About Section (What is Under the Sea) Styles */
   .about-section {
-    padding: 120px 90px 120px 90px;
+    padding: 5rem 3.5rem 5rem 3.5rem;
   }
   .about-section .inner-wrapper h3 {
-    margin: 0px 0px 20px 0px;
-    font-size: 1.9rem;
+    margin: 0rem 0rem 1rem 0rem;
   }
   .about-section .inner-wrapper p {
     text-align: center;
-    font-size: 0.9rem;
-  }
-  .about-section .inner-wrapper a {
-    font-size: 0.9rem;
   }
 
-  .read-more-section .inner-wrapper .img-container-left {
+  /* Read More Section (New Additions and Meet Real Nemo) Styles */
+  .read-more-section .img-container-left {
+    margin: 1rem 0rem 0rem 0rem;
     width: 40%;
-    padding-top: 50px;
   }
-  .read-more-section .inner-wrapper .img-container-left img {
+  .read-more-section .img-container-left img {
+    position: static;
     width: 100%;
+    -webkit-box-shadow: 20px 20px 0 #86E0F9;
+            box-shadow: 20px 20px 0 #86E0F9;
   }
-  .read-more-section .inner-wrapper .img-container-right {
+  .read-more-section .img-container-right {
+    margin: 3rem 0rem 0rem 0rem;
     width: 40%;
-    padding-top: 50px;
   }
-  .read-more-section .inner-wrapper .img-container-right img {
+  .read-more-section .img-container-right img {
+    position: static;
+    bottom: -400px;
     width: 100%;
+    -webkit-box-shadow: -20px 20px 0 #86E0F9;
+            box-shadow: -20px 20px 0 #86E0F9;
   }
-  .read-more-section .inner-wrapper .txt-container-right {
-    width: 50%;
-    margin-left: 65px;
+  .read-more-section .txt-container-right {
+    margin: 1rem 0rem 0rem 3rem;
+    width: 45%;
   }
-  .read-more-section .inner-wrapper .txt-container-right h4 {
-    font-size: 1.4rem;
-  }
-  .read-more-section .inner-wrapper .txt-container-right p {
-    font-size: 0.9rem;
-  }
-  .read-more-section .inner-wrapper .txt-container-right a {
-    font-size: 0.9rem;
-  }
-  .read-more-section .inner-wrapper .txt-container-left {
-    width: 50%;
-    margin-right: 65px;
-  }
-  .read-more-section .inner-wrapper .txt-container-left h4 {
-    font-size: 1.4rem;
-  }
-  .read-more-section .inner-wrapper .txt-container-left p {
-    font-size: 0.9rem;
-  }
-  .read-more-section .inner-wrapper .txt-container-left a {
-    font-size: 0.9rem;
+  .read-more-section .txt-container-left {
+    margin: 3rem 3rem 0rem 0rem;
+    width: 45%;
   }
 
-  .additional-info-section h4 {
-    font-size: 1.4rem;
-  }
-  .additional-info-section p {
-    font-size: 0.9rem;
-  }
-
+  /* This Month Profile Section Styles */
   .this-month-profile .inner-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1009,7 +1272,7 @@ footer p {
   }
   .this-month-profile .img-container {
     width: 50%;
-    margin: 0px 0px 50px 0px;
+    margin: 0rem 0rem 2.5rem 0rem;
   }
   .this-month-profile .img-container img {
     -webkit-box-shadow: none;
@@ -1031,16 +1294,17 @@ footer p {
   }
   .this-month-profile .txt-container h3 {
     text-align: center;
-    font-size: 1.9rem;
   }
   .this-month-profile .txt-container p {
     text-align: center;
-    font-size: 0.9rem;
-  }
-  .this-month-profile .txt-container a {
-    font-size: 0.9rem;
   }
 
+  /*  Blog Page Specific Styles
+  =======================================================================*/
+  .blog-sections {
+    /* Aside Section Styling */
+    /* Article Section (Blog) Stying */
+  }
   .blog-sections .inner-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1049,25 +1313,23 @@ footer p {
   }
   .blog-sections aside {
     width: 100%;
-    padding: 80px 0px 0px 0px;
+    padding: 4rem 0rem 0rem 0rem;
   }
   .blog-sections aside .side-bar-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 20px 0px 20px 0px;
+    padding: 1rem;
   }
   .blog-sections aside .side-bar-container .img-container {
     width: 50%;
-    margin: 0px 20px 0px 20px;
-  }
-  .blog-sections aside .side-bar-container .img-container img {
-    position: static;
-    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 0;
   }
   .blog-sections aside .side-bar-container .txt-container {
-    width: 40%;
-    margin: 0;
+    width: 50%;
+    margin: 0rem 0rem 0rem 1rem;
   }
   .blog-sections aside .side-bar-container .txt-container h5 {
     font-size: 1.1rem;
@@ -1075,7 +1337,7 @@ footer p {
   .blog-sections aside .side-bar-container .txt-container p {
     font-size: 0.8rem;
     line-height: 1.3rem;
-    margin: 0px 0px 25px 0px;
+    margin: 0rem 0rem 1.25rem 0rem;
   }
   .blog-sections aside .side-bar-container .txt-container li {
     font-size: 0.8rem;
@@ -1083,87 +1345,144 @@ footer p {
   }
   .blog-sections article {
     width: 100%;
+    padding-top: 2.5rem;
+    /* Comment Section Subsection Styling */
   }
   .blog-sections article .blog-content {
     border: 5px solid #86E0F9;
-    padding: 10px 0px 0px 0px;
-    margin-top: 50px;
   }
   .blog-sections article .blog-content .img-container {
-    width: 100%;
-    padding: 15px;
-  }
-  .blog-sections article .blog-content .img-container img {
-    width: 100%;
-    position: static;
+    width: 95%;
+    top: 0;
+    left: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
+    margin: 1rem auto;
   }
   .blog-sections article .blog-content .txt-container {
     margin: 0px 25px 0px 25px;
   }
   .blog-sections article .posted-comments {
-    margin: 0px 25px 0px 25px;
+    margin: 0rem 1.25rem 0rem 1.25rem;
   }
-  .blog-sections article form .name-email-container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+
+  /*  Contact Page Specific Styles
+  =======================================================================*/
+  .contact {
+    padding: 4rem 0rem 3rem 0rem;
   }
-  .blog-sections article form .name-email-container input {
-    margin: 0px 0px 40px 0px;
+  .contact .inner-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
-  .blog-sections article form textarea {
-    margin: 0px 0px 50px 0px;
-  }
-  .blog-sections article form button {
-    margin: 0;
+  .contact .contact-info-container {
     width: 100%;
+    margin: 2.5rem 0rem 0rem 0rem;
+  }
+  .contact .contact-info-container ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact .contact-info-container li {
+    margin: 0rem 0.75rem 0rem 0.75rem;
+  }
+  .contact .contact-info-container h5 {
+    text-align: center;
+  }
+  .contact .contact-info-container p {
+    text-align: center;
+  }
+  .contact form {
+    position: static;
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
   }
 }
+/* Major Breakpoint #3 - Mobile Screens */
 @media screen and (max-width: 480px) {
-  .header .inner-wrapper .img-container {
+  /*  General Header Styles
+  =======================================================================*/
+  header .inner-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .mobile-menu-wrap {
+    display: block;
+  }
+  header .primary-nav {
     display: none;
   }
-  .header .primary-nav {
+  header .header-title-container {
+    width: 100%;
+  }
+
+  /*  Home Page Specific Styles
+  =======================================================================*/
+  /* Header Styles */
+  .home-header .inner-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home-header .header-title-container {
+    width: 80%;
+    margin: 0rem 0rem 0rem 0rem;
+  }
+  .home-header .header-title-container h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .home-header .header-img-container {
     display: none;
   }
 
+  /* About Section (What is Under the Sea) Styles */
   .about-section {
-    padding: 120px 0px 120px 0px;
+    padding: 6rem 0rem 6rem 0rem;
   }
   .about-section h3 {
     padding: 0px 40px 0px 40px;
+    padding: 0rem 2rem 0rem 2rem;
   }
 
+  /* Read More Section (New Additions and Meet Real Nemo) Styles */
   .read-more-section h4, .read-more-section p, .read-more-section a {
     text-align: center;
   }
-  .read-more-section .inner-wrapper .img-container-left {
+  .read-more-section .img-container-left {
     width: 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .read-more-section .inner-wrapper .img-container-left img {
+  .read-more-section .img-container-left img {
     width: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .read-more-section .inner-wrapper .img-container-right {
+  .read-more-section .img-container-right {
     width: 100%;
-    padding-top: 80px;
+    margin-bottom: 1.75rem;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
-  .read-more-section .inner-wrapper .img-container-right img {
+  .read-more-section .img-container-right img {
     width: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .read-more-section .inner-wrapper .txt-container-right {
-    margin: 0;
+  .read-more-section .txt-container-right {
+    margin: 2rem 0rem 0rem 0rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1179,7 +1498,8 @@ footer p {
         -ms-flex-order: 2;
             order: 2;
   }
-  .read-more-section .inner-wrapper .txt-container-left {
+  .read-more-section .txt-container-left {
+    margin: 2rem 0rem 0rem 0rem;
     margin: 0;
     width: 100%;
     display: -webkit-box;
@@ -1197,8 +1517,9 @@ footer p {
             order: 4;
   }
 
+  /* Additional Info Section (Locations, Community, Blog, Get in Touch) Styles */
   .additional-info-section {
-    padding: 120px 0px 50px 0px;
+    padding: 5rem 0rem 2.5rem 0rem;
   }
   .additional-info-section .inner-wrapper {
     -webkit-box-orient: vertical;
@@ -1210,11 +1531,13 @@ footer p {
     width: 100%;
   }
 
+  /* This Month Profile Section Styles */
   .this-month-profile {
-    padding: 120px 0px 100px 0px;
+    padding: 6rem 0rem 5rem 0rem;
   }
 
-  .gallery .inner-wrapper ul {
+  /* Gallery Section Styles */
+  .gallery ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1223,14 +1546,13 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
   }
-  .gallery .inner-wrapper ul li {
+  .gallery ul li {
     width: 80%;
-    margin: 25px 0px 25px 0px;
+    margin: 1.25rem 0px 1.25rem 0px;
   }
 
-  .blog-sections p {
-    font-size: 0.8rem;
-  }
+  /*  Blog Page Specific Styles
+  =======================================================================*/
   .blog-sections aside .side-bar-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1240,7 +1562,114 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
   }
+  .blog-sections aside .side-bar-container .img-container {
+    width: 100%;
+  }
   .blog-sections aside .side-bar-container .txt-container {
     width: 100%;
+    margin-top: 1rem;
+  }
+  .blog-sections article h3 {
+    margin-bottom: 1rem;
+  }
+  .blog-sections article .posted-comments .comments-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .blog-sections article .posted-comments .comments-box .img-container {
+    width: 25%;
+  }
+  .blog-sections article .posted-comments .comments-box p:first-of-type {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .blog-sections article form .name-email-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog-sections article form .name-email-container .input-name-container {
+    width: 100%;
+  }
+  .blog-sections article form .name-email-container .input-email-container {
+    width: 100%;
+  }
+  .blog-sections article form .name-email-container input {
+    width: 100%;
+  }
+  .blog-sections article form textarea {
+    margin-top: 1rem;
+  }
+
+  /*  Contact Page Specific Styles
+  =======================================================================*/
+  .contact form .name-email-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact form .name-email-container .input-name-container {
+    width: 100%;
+  }
+  .contact form .name-email-container .input-email-container {
+    width: 100%;
+  }
+  .contact form .name-email-container input {
+    width: 100%;
+  }
+  .contact form textarea {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  /*  Home Page Specific Styles
+  =======================================================================*/
+  .home-header .header-title-container h1 {
+    font-size: 3.9rem;
+  }
+
+  .about-section p,
+.read-more-section p,
+.additional-info-section p,
+.this-month-profile p {
+    font-size: 0.8rem;
+  }
+
+  .additional-info-section h4 {
+    line-height: 1.8rem;
+  }
+
+  /*  Blog Page Specific Styles
+  =======================================================================*/
+  .blog-sections article h3 {
+    font-size: 1.7rem;
+  }
+  .blog-sections article p {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  .blog-sections article .posted-comments {
+    margin: 0rem 0.75rem 0rem 0.75rem;
+  }
+  .blog-sections article .posted-comments .txt-container {
+    width: 100%;
+  }
+  .blog-sections article form input,
+.blog-sections article form textarea {
+    font-size: 0.8rem;
+  }
+
+  /*  Contact Page Specific Styles
+  =======================================================================*/
+  .contact .contact-info-container p {
+    font-size: 0.8rem;
+  }
+  .contact form {
+    padding: 4rem 1rem 2.5rem 1rem;
   }
 }

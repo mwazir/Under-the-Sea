@@ -1,4 +1,4 @@
-/* Typography */
+/* Typography Partial */
 
 html {
     font-size: 125%; // Setting base-font to 20px (16px * 125%)
@@ -21,14 +21,14 @@ h1 {
     @include fontSize(138);
     @include lineHeight(126);
     text-transform: uppercase;
-    margin-bottom: 20px;    
+    margin: 0;
 }
 
 h2 {
     @include fontSize(80);
     @include lineHeight(92);
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 h3 {
@@ -36,22 +36,22 @@ h3 {
     @include lineHeight(42);
     @include letterSpacing(1);
     text-transform: uppercase;
-    margin-bottom: 20px;
     text-align: center;
+    margin: 0;
 }
 
 h4 {
     @include fontSize(32);
     @include letterSpacing(1);
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 h5 {
     @include fontSize(28);
     @include letterSpacing(1);
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 nav li, a {
@@ -62,8 +62,7 @@ nav li, a {
     text-transform: uppercase;
     text-align: center;
     vertical-align: center;
-    padding: 10;
-    margin: 10;
+    margin: 0;
     
 }
 
@@ -72,6 +71,7 @@ button {
     @include lineHeight(32);
     @include letterSpacing(1);
     text-transform: uppercase;
+    margin: 0;
 }
 
 
