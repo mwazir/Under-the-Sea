@@ -1,4 +1,4 @@
-# Hacker News Sentiment Analyzer App
+# Under the Sea Responsive Website
 
 ## Live site:
 - https://under-the-sea-site.netlify.app/index.html
