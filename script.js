@@ -73,11 +73,7 @@ const submitBlogForm = (event) => {
 }
 
 // event listener for when the form is submitted
-<<<<<<< HEAD
-blogForm.addEventListener('submit', submitBlogForm)
-=======
 if (document.querySelector('.blog-header')) {
     blogForm.addEventListener('submit', submitBlogForm);
 }
 
->>>>>>> main
