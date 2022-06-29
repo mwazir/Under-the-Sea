@@ -107,12 +107,13 @@
                             <!-- Start of Comments Section-->
                             <section class="comments">
                                 <!-- Start of Posted Comments Section-->
-                                <div class="posted-comments">
+                                <div class="posted-comments" id="blog-posted-comments">
                                     <h4>Comments:</h4>
                                     <div class="comments-box">
                                         <div class="img-container">
                                             <img src="./assets/comment-1.jpg" alt="a young african-american looking girl">
                                         </div>
+                                        <!--.img-container END-->
                                         <div class="txt-container">
                                             <p>Tuesday October 9th, 2018 by Jeremy</p>
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis voluptatum est excepturi, possimus quasi iusto quos, dolorum officia quisquam repudiandae nisi. Quod quidem molestias dignis Doloribus dignissimos asperiores accusantium neque.</p>
@@ -134,18 +135,18 @@
                                 </div>
                                 <!-- End of of Posted Comments Section-->
                                 <!-- Start of Comments Form-->
-                                <form action="#">
+                                <form action="#" id="blog-form">
                                     <div class="name-email-container">
                                         <div class="input-name-container">
-                                            <input type="text" id="name" placeholder="Name">
+                                            <input type="text" id="name" placeholder="Name" required>
                                             <label for="name"></label>
                                         </div>
                                         <div class="input-email-container">
-                                            <input type="text" id="email" placeholder="Email Address">
+                                            <input type="email" id="email" placeholder="Email Address" required>
                                             <label for="email"></label>
                                         </div>
                                     </div>
-                                    <textarea id="comment" rows="10" cols="50" placeholder="Comment"></textarea>
+                                    <textarea id="comment" rows="10" cols="50" placeholder="Comment" required></textarea>
                                     <label for="comment"></label>
                                     <button type="submit">Post Comment</button>
                                 </form>
@@ -166,5 +167,7 @@
             </div>
         </footer>
         <!--End of Footer-->
+        <!--Linking JS Script-->
+        <script src="./script.js"></script>
     </body>
 </html>
