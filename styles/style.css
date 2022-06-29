@@ -650,6 +650,7 @@ header .primary-nav li:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 90vh;
   /* Header Title Styles */
   /* Header Image Styles (Non-background) */
 }
@@ -678,6 +679,7 @@ header .primary-nav li:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 90vh;
   /* Header Title Styles */
 }
 .blog-header .title-container {
@@ -696,6 +698,7 @@ header .primary-nav li:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 80vh;
   /* Header Title Styles */
 }
 .contact-header .title-container {
@@ -894,7 +897,7 @@ header .primary-nav li:hover {
   position: relative;
 }
 .blog-sections aside .img-container {
-  width: 120%;
+  width: 100%;
   position: relative;
   top: -25px;
   right: 100px;
@@ -1064,11 +1067,10 @@ header .primary-nav li:hover {
 .contact form {
   width: 100%;
   position: relative;
-  top: -375px;
+  top: -250px;
   right: -25px;
   background: #0F614E;
   padding: 4rem 2.5rem 2.5rem 2.5rem;
-  margin-bottom: -10rem;
   -webkit-box-shadow: -45px 45px 0 #86E0F9;
           box-shadow: -45px 45px 0 #86E0F9;
 }

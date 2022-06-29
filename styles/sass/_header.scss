@@ -191,6 +191,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 90vh;
 
     /* Header Title Styles */
     .header-title-container {
@@ -224,7 +225,8 @@ header {
     background: url(../assets/blog-header.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;    
+    background-size: cover;
+    min-height: 90vh;
 
     /* Header Title Styles */
     .title-container {
@@ -246,6 +248,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 80vh;
 
     /* Header Title Styles */
     .title-container {
